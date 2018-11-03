@@ -1,0 +1,45 @@
+// ------------------------------------------------
+// Socials Styles Start
+// ------------------------------------------------
+
+.socials
+  +position(absolute, null null 4rem 10%)
+  +clearfix
+
+  ul
+    display: block
+    position: relative
+    li
+      display: inline-block
+      margin: 0 2.4rem 0 0
+
+      a
+        display: block
+        position: relative
+        font-size: 1.6rem
+        color: $txt-dark
+        transition: color .3s
+        i
+          font-size: 1.6rem
+
+      .no-touch &:hover
+        a
+          color: $txt-light
+
+  +MQ(XL)
+    +position(absolute, null auto 4rem 6.4rem)
+
+    ul
+      display: block
+      li
+        display: inline-block
+        margin: 0 2.4rem 0 0
+        a
+          display: block
+
+  +MQ(XXL)
+    +position(absolute, null auto 4.8rem 8rem)
+
+// ------------------------------------------------
+// Socials Styles End
+// ------------------------------------------------

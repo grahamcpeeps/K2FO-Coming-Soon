@@ -1,0 +1,172 @@
+// -----------------------------------------------------
+// Static Gallery Block & PhotoSwipe Custom Styles Start
+// -----------------------------------------------------
+
+.gallery
+  position: relative
+  +clearfix
+
+.my-gallery
+  figure
+    position: relative
+    margin: 0
+    overflow: hidden
+    cursor: pointer
+
+    &::after
+      content: ''
+      +position(absolute, 0 null null 0)
+      width: 100%
+      height: 100%
+      background-color: $bsc-white
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 50%,rgba(255,255,255,0.6) 100%)
+      opacity: 1
+      transition: transform .5s, opacity .5s
+    &:nth-of-type(2), &:nth-of-type(3)
+      &::after
+        background-color: #292929
+        background: linear-gradient(to bottom, rgba(41,41,41,0) 0%,rgba(41,41,41,0) 50%,rgba(41,41,41,0.6) 100%)
+
+    figcaption
+      +position(absolute, 3.2rem null null 3.2rem)
+      width: calc(100% - 6.4rem)
+      height: calc(100% - 6.4rem)
+      z-index: 1
+
+      h4
+        +position(absolute, null null 0 0)
+        font-size: 1.8rem
+        font-weight: 700
+        text-transform: uppercase
+        line-height: 1.2
+        color: $txt-dark
+        opacity: 1
+        transform: translateX(0)
+        transition: transform .5s, opacity .5s
+
+        small
+          display: block
+          margin-top: .6rem
+          font-family: $caption-font
+          text-transform: none
+          letter-spacing: normal
+          font-size: 1.4rem
+          font-weight: 300
+          color: $txt-dark
+
+      p
+        display: none
+
+    &:nth-of-type(2), &:nth-of-type(3)
+      figcaption
+        h4
+          color: $txt-white
+          small
+            color: rgba($txt-white, .8)
+
+    +MQ(XL)
+      height: 50vh
+      &::after
+        background-color: $bsc-white
+        opacity: 0
+        transition: transform .5s, opacity .5s
+      &:nth-of-type(2), &:nth-of-type(3)
+        &::after
+          background-color: #292929
+
+      img
+        width: auto
+        height: 50vh
+
+      .works-image
+        opacity: 0
+
+      .works-link
+        position: relative
+        float: left
+        width: 100%
+        height: 100%
+        overflow: hidden
+        text-align: center
+
+        .picture
+          +position(absolute, 0 null null 0)
+          width: 100%
+          height: 100%
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: cover
+          transition: background-position .5s
+
+      figcaption
+        h4
+          opacity: 0
+          transform: translateX(-1.6rem)
+          transition: transform .5s, opacity .5s
+
+      .no-touch &:hover
+        &::after
+          opacity: 1
+        figcaption
+          h4
+            transform: translateX(0)
+            opacity: 1
+
+.pswp__caption__center
+  h4
+    margin-bottom: 1.6rem
+    font-size: 1.8rem
+    font-weight: 700
+    color: $txt-white
+    text-transform: uppercase
+    small
+      font-family: $caption-font
+      display: block
+      padding-top: .8rem
+      font-size: 1.4rem
+      font-weight: 400
+      color: rgba($txt-white, .8)
+      text-transform: none
+  p
+    line-height: 1.6
+    font-size: 1.4rem
+    font-weight: 300
+    color: rgba($txt-white, .6)
+
+.pswp__counter
+  font-family: $default-font
+
+.pswp__button--close
+  opacity: 1
+
+.pswp__button--arrow--left::before, .pswp__button--arrow--right::before
+  width: 44px
+  height: 44px
+
+.pswp__button--arrow--left:before
+  left: 0
+  background-position: -132px -44px
+
+.pswp__button--arrow--right:before
+  right: 0
+  background-position: -88px -44px
+
+.pswp__caption__center
+  h4
+    color: $txt-white
+    small
+      color: rgba($txt-white, .8)
+  p
+    color: rgba($txt-white, .6)
+
+.pswp__bg
+  background: #292929
+
+.pswp__caption, .pswp__top-bar
+  background-color: rgba(0,0,0,.3)
+
+.pswp__button--close
+  background-color: $bsc-white
+// ----------------------------------------------------
+// Static Gallery Block & PhotoSwipe Custom Styles End
+// ----------------------------------------------------

@@ -1,0 +1,60 @@
+// ------------------------------------------------
+// Blockquote Styles Start
+// ------------------------------------------------
+
+.blockquote
+  position: relative
+  +clearfix
+  min-height: 600px
+  padding: 6.4rem 10%
+  background-repeat: no-repeat
+  background-position: bottom center
+  background-size: cover
+  +MQ(M)
+    min-height: 760px
+  +MQ(XL)
+    padding: 6.4rem 8rem
+
+.blockquote-content
+  position: relative
+  padding: 8rem 0 0 0
+  z-index: 1
+  max-width: 660px
+  &::after
+    font-family: "Ionicons"
+    content: "\f347"
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 5rem
+    line-height: 1
+    color: rgba($txt-dark, .1)
+
+  blockquote
+    display: block
+    position: relative
+    +clearfix
+
+    p
+      margin: 0 0 2.4rem 0
+      font-family: $caption-font
+      font-size: 2rem
+
+      color: $txt-dark
+    cite
+      font-size: 1.4rem
+      color: $txt-medium
+      span
+        display: block
+  +MQ(M)
+    padding: 8.8rem 0 0 0
+    &::after
+      font-size: 6rem
+    blockquote
+      p
+        font-size: 2.8rem
+
+// ------------------------------------------------
+// Blockquote Styles End
+// ------------------------------------------------

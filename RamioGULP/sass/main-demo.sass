@@ -1,0 +1,659 @@
+/*! ------------------------------------------------
+   Project Name: Ramio Coming Soon Template
+   Project Description: Ramio - awesome coming soon template to kick-start your project
+   Tags: Ramio, coming soon, under construction, template, coming soon page, html5, css3
+   Version: 1.0.0
+   Build Date: April 2018
+   Last Update: April 2018
+   This product is available exclusively on Themeforest
+   Author: mix_design
+   Author URI: http://mixdesign.club
+   File name: main-demo.css
+   ------------------------------------------------
+
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Base CSS Styles
+    2. Intro Styles
+    3. Loading Animation Styles
+    4. Preview Sections Styles
+    5. Headline Styles
+    6. Preview Links Styles
+    7. Buttons Styles
+    8. Footer Styles
+    9. Animations
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+// Import Bourbon
+@import "bourbon"
+
+// Import Mixins and Variables
+@import "partials/layout"
+@import "partials/mixins"
+@import "partials/variables"
+
+// Demo Mixins and Variables
+// Colors
+$bluegem: #4d3a8f
+$turquoise: #40e1e8
+$radicalred: #f3414d
+$cornflower: #95bce4
+$jacksonspurple: #333b8f
+$bittersweet: #fd625e
+$white: #ffffff
+$black: #121212
+
+/* ------------------------------------------------*/
+/* Base Styles Start
+/* ------------------------------------------------*/
+*, *::before, *::after
+  box-sizing: border-box
+
+button:active, button:focus
+  outline: none !important
+
+button::-moz-focus-inner
+  border: 0 !important
+
+input::-moz-focus-inner
+  border: 0 !important
+
+::selection
+  background-color: $bluegem
+  color: $turquoise
+  text-shadow: none
+
+html
+  font-family: sans-serif
+  font-size: 62.5%
+  +font-smoothing
+
+html,
+body
+  width: 100%
+  height: 100%
+
+body
+  min-width: 320px
+  position: relative
+  overflow-x: hidden
+  font-family: $default-font
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 1.7
+  background-color: shade($bsc-grey-dark, 40%)
+  color: $txt-medium
+
+a
+  text-decoration: none
+  color: $txt-medium
+
+img
+  display: block
+  width: 100%
+  height: auto
+
+h1
+  font-family: $default-font
+  font-size: 3rem
+  font-weight: 700
+  color: #121212
+  line-height: 1.2
+
+  span
+    color: #f3414d
+
+  +MQ(M)
+    font-size: 3.6rem
+
+  +MQ(XXL)
+    font-size: 4.8rem
+
+.float-md-right
+  float: left
+  +MQ(M)
+    float: right
+
+.float-right
+  float: right
+
+.no-padding
+  padding: 0
+
+section
+  position: relative
+  width: 100%
+
+  &.intro
+    min-height: 480px
+    color: #fff
+    text-align: center
+/* ------------------------------------------------*/
+/* Base Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles Start
+/* ------------------------------------------------*/
+@import "modules/elements-buttons"
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Intro Styles Start
+/* ------------------------------------------------*/
+.intro
+  background-color: #efefef
+  background-image: url('../img/demo/bg-1.png')
+  background-position: -80px 100px
+  background-repeat: no-repeat
+  background-size: 800px
+
+  +MQ(M)
+    background-position: center 200px
+    padding-bottom: 160px
+    background-size: 100%
+
+  +MQ(L)
+    background-position: center 150px
+    padding-bottom: 230px
+    background-size: 90%
+
+  +MQ(XL)
+    background-position: center 110px
+    background-size: 84%
+
+  +MQ(XXL)
+    background-position: center 162px
+    padding-bottom: 400px
+    background-size: auto
+
+header
+  position: relative
+  +clearfix
+  padding: 4rem 10% 0 10%
+  z-index: 1
+
+  .logo
+    margin-bottom: 2.4rem
+    img
+      width: auto
+      margin: 0 auto
+
+  .buttons
+    text-align: center
+
+  +MQ(M)
+    .logo
+      margin-bottom: 0
+      img
+        width: 150px
+        height: auto
+        margin: 0
+    .buttons
+      text-align: right
+      padding-top: 10px
+
+  +MQ(L)
+    padding: 48px 100px 0 100px
+
+  +MQ(XXL)
+    padding: 80px 140px 0 140px
+    .logo
+      img
+        width: 188px
+        height: auto
+    .buttons
+      padding-top: 20px
+
+.intro__content
+  position: relative
+  .headline
+    padding: 100px 10%
+  +MQ(M)
+    .headline
+      padding: 120px 10%
+  +MQ(L)
+    .headline
+      padding: 92px 100px
+      h1
+        max-width: 600px
+        margin: 0 auto
+  +MQ(XXL)
+    .headline
+      padding: 120px 140px
+      h1
+        max-width: 700px
+        margin: 0 auto
+
+.intro_illustrations
+  position: absolute
+  left: 0
+  bottom: -180px
+  width: 100%
+  height: 227px
+  overflow: hidden
+  z-index: 10
+
+  +MQ(M)
+    height: 497px
+    bottom: -230px
+
+  +MQ(L)
+    bottom: -354px
+    height: 671px
+
+  +MQ(XXL)
+    bottom: -450px
+    height: 941px
+
+.illustration-1
+  position: absolute
+  +center(x)
+  bottom: 0
+  width: 320px
+  height: 227px
+  background-image: url('../img/demo/bg-3.png')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  z-index: 1
+  +MQ(M)
+    width: 700px
+    height: 497px
+  +MQ(L)
+    width: 946px
+    height: 671px
+  +MQ(XXL)
+    width: 1326px
+    height: 941px
+
+.illustration-2, .illustration-3, .illustration-4, .illustration-5
+  display: none
+  +MQ(XL)
+    display: block
+
+.illustration-2
+  position: absolute
+  left: 66px
+  top: 200px
+  width: 516px
+  height: 290px
+  background-image: url('../img/demo/bg-4.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+
+  +MQ(XL)
+    left: 48px
+    top: 140px
+    width: 360px
+    height: 202px
+
+  +MQ(XXL)
+    left: 66px
+    top: 200px
+    width: 516px
+    height: 290px
+
+.illustration-3
+  position: absolute
+  left: 118px
+  top: 414px
+  width: 300px
+  height: 225px
+  background-image: url('../img/demo/bg-5.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2)
+
+  +MQ(XL)
+    left: 86px
+    top: 290px
+    width: 208px
+    height: 156px
+
+  +MQ(XXL)
+    left: 118px
+    top: 414px
+    width: 300px
+    height: 225px
+
+.illustration-4
+  position: absolute
+  right: 60px
+  top: 240px
+  width: 516px
+  height: 290px
+  background-image: url('../img/demo/bg-7.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+
+  +MQ(XL)
+    right: 50px
+    top: 170px
+    width: 360px
+    height: 202px
+
+  +MQ(XXL)
+    width: 516px
+    height: 290px
+
+.illustration-5
+  position: absolute
+  right: -120px
+  top: 420px
+  width: 516px
+  height: 290px
+  background-image: url('../img/demo/bg-6.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2)
+
+  +MQ(XL)
+    right: -80px
+    top: 280px
+    width: 360px
+    height: 202px
+
+  +MQ(XXL)
+    right: -120px
+    top: 400px
+    width: 516px
+    height: 290px
+/* ------------------------------------------------*/
+/* Intro Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Loading Animation Styles Start
+/* ------------------------------------------------*/
+body
+  &.loaded
+    // 1-st Items Loading
+    .headline
+      animation: .5s ease-in-out 1 both slideInUp
+
+    // 2-nd Items Loading
+    header
+      .logo,
+      .buttons
+        animation: .5s ease-in-out .1s 1 both fadeIn
+
+    // 3-rd Items loading
+    .intro_illustrations
+      .illustration-1
+        animation: .3s ease-in-out .3s 1 both fadeIn
+      .illustration-2
+        animation: .3s ease-in-out .4s 1 both slideInUp
+      .illustration-3
+        animation: .3s ease-in-out .5s 1 both slideInUp
+      .illustration-4
+        animation: .3s ease-in-out .6s 1 both slideInUp
+      .illustration-5
+        animation: .3s ease-in-out .7s 1 both slideInUp
+/* ------------------------------------------------*/
+/* Loading Animation Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Preview Sections Styles Start
+/* ------------------------------------------------*/
+.demo__content
+  background-color: #f9f9f9
+  padding: 5.6rem 0 0 0
+  color: #444
+
+  &.first-section
+    padding-top: 250px
+    background-image: url('../img/demo/bg-2-s.jpg')
+    background-position: 0 0
+    background-repeat: repeat-x
+
+  +MQ(M)
+    padding: 5.6rem 0 2.4rem 0
+    &.first-section
+      padding-top: 280px
+
+  +MQ(L)
+    padding: 5.6rem 0 2.4rem 0
+    &.first-section
+      padding-top: 430px
+      background-image: url('../img/demo/bg-2.jpg')
+
+  +MQ(XXL)
+    &.first-section
+      padding-top: 480px
+/* ------------------------------------------------*/
+/* Preview Sections Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Headline Styles Start
+/* ------------------------------------------------*/
+.demo__headline
+  width: 100%
+  padding: 0 10%
+  text-align: center
+  //background: red
+  margin-bottom: 4.8rem
+  .title
+    font-family: $default-font
+    font-size: 3rem
+    font-weight: 700
+    line-height: 1
+    color: $txt-black
+    margin-bottom: 1.6rem
+  .subtitle
+    font-size: 1.6rem
+    font-weight: 300
+    max-width: 800px
+    margin: 0 auto 2.4rem
+
+  +MQ(M)
+    padding: 0 10%
+    margin-bottom: 5.6rem
+
+  +MQ(L)
+    padding: 0 100px
+    margin-bottom: 7.2rem
+    .title
+      font-size: 3.6rem
+      margin-bottom: 2rem
+    .subtitle
+      font-size: 1.6rem
+      max-width: 680px
+
+  +MQ(XXL)
+    padding: 0 140px
+    .title
+      font-size: 4.8rem
+      margin-bottom: 2.6rem
+    .subtitle
+      font-size: 1.9rem
+      max-width: 800px
+
+.demo__links
+  position: relative
+  +clearfix
+  width: 100%
+  padding: 0 10%
+
+  +MQ(L)
+    figure
+      &.figure-left
+        padding-right: 2.8rem
+      &.figure-right
+        padding-left: 2.8rem
+
+  +MQ(XL)
+    padding: 0 100px
+
+    figure
+      &.figure-left
+        padding-right: 2.8rem
+      &.figure-right
+        padding-left: 2.8rem
+
+  +MQ(XXL)
+    padding: 0 140px
+
+    figure
+      &.figure-left
+        padding-right: 3.6rem
+      &.figure-right
+        padding-left: 3.6rem
+
+.colors
+  margin: 0 auto
+  & > div
+    display: inline-block
+    width: 50px
+    height: 50px
+    //opacity: .9
+    border-radius: 50%
+
+    &.colors__base
+      margin-right: -34px
+
+  +MQ(M)
+    & > div
+      width: 72px
+      height: 72px
+
+      &.colors__base
+        margin-right: -48px
+
+.bluegem
+  background-color: $bluegem
+.turquoise
+  background-color: $turquoise
+.radicalred
+  background-color: $radicalred
+.cornflower
+  background-color: $cornflower
+.jacksonspurple
+  background-color: $jacksonspurple
+.bittersweet
+  background-color: $bittersweet
+.white
+  background-color: $white
+.black
+  background-color: $black
+/* ------------------------------------------------*/
+/* Headline Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Preview Links Styles Start
+/* ------------------------------------------------*/
+figure
+  position: relative
+
+  a
+    display: block
+
+    .no-touch &:hover
+      .item__image
+        transform: translateY(-1.6rem)
+        box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -7px rgba(0,0,0,0.2)
+
+  .item__image
+    position: relative
+    width: 100%
+    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.06), 0 3px 14px 2px rgba(0,0,0,0.08), 0 5px 5px -3px rgba(0,0,0,0.1)
+    //box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)
+    transform: translateY(0)
+    transition: all .5s cubic-bezier(0, 1.04, 0.68, 1.04)
+
+  figcaption
+    display: block
+    text-align: center
+    margin-bottom: 4.8rem
+
+    p
+      margin-top: 1.6rem
+      font-size: 1.6rem
+      font-weight: 700
+      color: $txt-black
+      line-height: 1.1
+
+  +MQ(M)
+    figcaption
+      margin-bottom: 5.6rem
+
+      p
+        margin-top: 2.4rem
+        font-size: 1.8rem
+
+  +MQ(L)
+    figcaption
+      margin-bottom: 7.2rem
+
+      p
+        margin-top: 3rem
+        font-size: 1.8rem
+/* ------------------------------------------------*/
+/* Preview Links Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Footer Styles Start
+/* ------------------------------------------------*/
+.demo__footer
+  background-color: #efefef
+  position: relative
+  padding: 12rem 10% 4.8rem 10%
+
+  background-image: url('../img/demo/footer-bg-s.jpg')
+  background-position: center 0
+  background-repeat: repeat-x
+  p
+    color: #121212
+    font-family: $default-font
+    font-weight: 700
+    font-size: 2rem
+    line-height: 1.2
+    text-align: center
+  i, a
+    color: $radicalred
+
+  +MQ(L)
+    padding: 14rem 10% 7.2rem 10%
+    background-image: url('../img/demo/footer-bg.jpg')
+  +MQ(XL)
+    p
+      font-size: 2.8rem
+/* ------------------------------------------------*/
+/* Footer Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Animations Start
+/* ------------------------------------------------*/
+@keyframes fadeIn
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes slideInUp
+  from
+    transform: translate3d(0, 50px, 0)
+    opacity: 0
+    visibility: visible
+  to
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+/* ------------------------------------------------*/
+/* Animations End
+/* ------------------------------------------------*/

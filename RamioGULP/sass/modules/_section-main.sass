@@ -1,0 +1,173 @@
+// ------------------------------------------------
+// Main Section Styles Start
+// ------------------------------------------------
+
+.main
+  position: relative
+  background-color: shade($bsc-grey-dark, 40%)
+  opacity: 1
+  transform: translateZ(0)
+  transform: scale(1)
+  transition: opacity $animation-duration - .4s
+  &.is-hidden
+    .main-intro
+      transform: translateY(0)
+    .main-media
+      transform: translateY(0)
+  &.notify-is-visible
+    .main-intro
+      transform: translateY(0)
+
+  +MQ(XL)
+    height: 100%
+    min-height: 546px
+    overflow: hidden
+    z-index: 8
+    transition: transform $animation-duration - .4s, opacity $animation-duration - .4s
+    &.is-hidden
+      .main-intro
+        transform: translateY(100%)
+      .main-media
+        transform: translateY(-100%)
+    &.notify-is-visible
+      .main-intro
+        transform: translateY(-100%)
+
+  +MQ(XXL)
+    min-height: 654px
+
+.main-intro
+  position: relative
+  height: auto
+  //height: 100vh
+  min-height: 480px
+  padding: 0
+  background-color: shade($bsc-grey-dark, 40%)
+  overflow: hidden
+  transform: translateY(0)
+  transition: transform $animation-duration - .2s ease-in-out
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: shade($bsc-grey-dark, 60%)
+    transform: translateX(-102%)
+    transition: transform $animation-duration - .5s ease-in-out
+    z-index: 1
+  +MQ(L)
+    height: 100vh
+    padding: 0
+  +MQ(XL)
+    height: 100%
+    min-height: 546px
+  +MQ(XXL)
+    min-height: 654px
+
+.intro-content
+  position: relative
+  min-height: 480px
+  padding: 180px 0
+  background-color: $bsc-white
+  opacity: 0
+  +MQ(L)
+    height: 100vh
+    padding: 0
+  +MQ(XL)
+    height: 100%
+    min-height: 546px
+  +MQ(XXL)
+    min-height: 654px
+
+.headline
+  position: relative
+  width: 100%
+  padding: 0 10%
+  +MQ(L)
+    position: absolute
+    left: 0
+    +center(y)
+  +MQ(XL)
+    padding: 0 6.4rem
+  +MQ(XXL)
+    padding: 0 8rem
+
+.main-media
+  position: relative
+  height: 600px
+  overflow: hidden
+  transform: translateY(0)
+  transition: transform $animation-duration - .2s ease-in-out
+  &::before
+    content: ""
+    display: block
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-color: shade($bsc-grey-dark, 60%)
+    transform: translateX(-102%)
+    transition: transform $animation-duration - .5s ease-in-out
+    z-index: 1
+  .image, .layer-cover
+    opacity: 0
+  .image
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    background-repeat: no-repeat
+    background-position: top center
+    background-size: cover
+  +MQ(M)
+    height: 760px
+  +MQ(XL)
+    height: 100%
+    min-height: 546px
+  +MQ(XXL)
+    min-height: 654px
+
+.animated-headline
+  display: inline-block
+  position: relative
+  overflow: hidden
+  &::before
+    height: 100%
+  span
+    opacity: 0
+
+.about-trigger
+  display: none
+  margin-right: 0
+  +MQ(XL)
+    display: inline-block
+
+.logo
+  +position(absolute, 4rem null null 10%)
+  z-index: 1
+  +MQ(XL)
+    top: 4.0rem
+    left: 6.4rem
+  +MQ(XXL)
+    top: 4.8rem
+    left: 8rem
+
+.notify-trigger
+  +position(absolute, 3.2rem 3.2rem null null)
+  z-index: 1
+  display: inline-block
+  overflow: hidden
+  &::before
+    height: 100%
+  a
+    display: block
+    opacity: 0
+  +MQ(M)
+    top: 4.0rem
+    right: 4.0rem
+  +MQ(XXL)
+    top: 4.8rem
+    right: 4.8rem
+
+// ------------------------------------------------
+// Main Section Styles Start
+// ------------------------------------------------

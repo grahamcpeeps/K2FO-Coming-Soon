@@ -1,0 +1,91 @@
+// ------------------------------------------------
+// Base Styles Start
+// ------------------------------------------------
+*, *::before, *::after
+  box-sizing: border-box
+
+button:active, button:focus
+  outline: none !important
+
+button::-moz-focus-inner
+  border: 0 !important
+
+input::-moz-focus-inner
+  border: 0 !important
+
+::selection
+  background-color: $bsc-grey-dark
+  color: $bsc-grey-medium
+  text-shadow: none
+
+html
+  font-family: sans-serif
+  font-size: 62.5%
+  +font-smoothing
+
+html,
+body
+  +MQ(L)
+    width: 100%
+    height: 100%
+
+body
+  min-width: 320px
+  position: relative
+  overflow-x: hidden
+  font-family: $default-font
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 1.7
+  background-color: shade($bsc-grey-dark, 40%)
+  color: $txt-medium
+  +MQ(XL)
+    overflow: hidden
+
+a
+  text-decoration: underline
+  color: $txt-dark
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+
+img
+  display: block
+  width: 100%
+  height: auto
+
+section
+  position: relative
+
+.no-padding
+  padding: 0
+
+.overflow-hidden
+  overflow: hidden
+
+.fullheight
+  position: relative
+  height: auto
+  +MQ(XL)
+    height: 100%
+
+.float-md-right
+  float: left
+  +MQ(M)
+    float: right
+
+.float-lg-right
+  float: left
+  +MQ(XL)
+    float: right
+
+.float-right
+  float: right
+
+.layer-black
+  +position(absolute, 0 null null 0)
+  width: 100%
+  height: 100%
+  background-color: rgba(0,0,0,.4)
+
+// ------------------------------------------------
+// Base Styles End
+// ------------------------------------------------

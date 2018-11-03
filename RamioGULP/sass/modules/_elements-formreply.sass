@@ -1,0 +1,45 @@
+// ------------------------------------------------
+// Form Reply Groups Styles Start
+// ------------------------------------------------
+
+.reply-group
+  position: absolute
+  +center
+  width: calc(100% - 6.4rem)
+  max-width: 32rem
+  padding: 0 3.2rem
+  text-align: center
+  background-color: transparent
+  opacity: 0
+  transition: opacity $animation-duration - .3s ease-in-out
+  &.is-visible
+    opacity: 1
+  i
+    display: block
+    font-size: 5rem
+    line-height: 1
+
+  .reply-group__title
+    font-size: 2rem
+    font-weight: 700
+    margin: .8rem 0
+
+  .reply-group__text
+    display: block
+    font-size: 1.5rem
+
+.notify
+  .reply-group
+    width: 100%
+    max-width: none
+    top: 0
+    left: 0
+    transform: translateX(0) translateY(0)
+    padding: 0 1.6rem
+    background-color: transparent
+    border: none
+    text-align: left
+
+// ------------------------------------------------
+// Form Reply Groups Styles End
+// ------------------------------------------------

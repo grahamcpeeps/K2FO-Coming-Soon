@@ -1,0 +1,50 @@
+// ------------------------------------------------
+// Features Styles Start
+// ------------------------------------------------
+
+.features
+  position: relative
+  padding: 0
+  margin-bottom: 0
+  +clearfix
+
+.feature-item
+  position: relative
+  text-align: center
+  .feature-description
+    padding: 6.4rem 10%
+
+.feature-item-left
+  +MQ(M)
+    padding: 0
+    .feature-description
+      position: absolute
+      right: 0
+      +center(y)
+      padding: 0 8rem 0 8rem
+
+.feature-item-right
+  .feature-image
+    float: left
+  +MQ(M)
+    padding: 0
+    .feature-image
+      float: right
+    .feature-description
+      position: absolute
+      left: 0
+      +center(y)
+      padding: 0 8rem 0 8rem
+
+.feature-image
+  height: 300px
+  position: relative
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: cover
+  +MQ(M)
+    height: 380px
+
+// ------------------------------------------------
+// Features Styles End
+// ------------------------------------------------

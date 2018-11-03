@@ -1,0 +1,174 @@
+/*! ------------------------------------------------
+   Project Name: Ramio Coming Soon Template
+   Project Description: Ramio - awesome coming soon template to kick-start your project
+   Tags: Ramio, coming soon, under construction, template, coming soon page, html5, css3
+   Version: 1.0.0
+   Build Date: April 2018
+   Last Update: April 2018
+   This product is available exclusively on Themeforest
+   Author: mix_design
+   Author URI: http://mixdesign.club
+   File name: first-screen.css
+   ------------------------------------------------
+
+   ------------------------------------------------
+   Table of Contents
+   ------------------------------------------------
+    1. Reset CSS
+    2. Base CSS Styles
+    3. Buttons and Controls
+    4. Main Section Styles
+    5. Main Section Typography Styles
+    6. Content Sections Minimal Styles
+    7. Popup Forms Minimal Styles
+   ------------------------------------------------
+   Table of Contents End
+   ------------------------------------------------ */
+
+// Import Bourbon
+@import "bourbon"
+
+/* ------------------------------------------------*/
+/* Reset CSS Start
+/* ------------------------------------------------*/
+@import "partials/reset"
+/* ------------------------------------------------*/
+/* Reset CSS End
+/* ------------------------------------------------*/
+
+// Import Mixins and Variables
+@import "partials/layout"
+@import "partials/mixins"
+@import "partials/variables"
+
+/* ------------------------------------------------*/
+/* Base Styles Start
+/* ------------------------------------------------*/
+@import "modules/base"
+/* ------------------------------------------------*/
+/* Base Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles Start
+/* ------------------------------------------------*/
+@import "modules/elements-buttons"
+/* ------------------------------------------------*/
+/* Buttons & Triggers Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Main Section Styles Start
+/* ------------------------------------------------*/
+@import "modules/section-main"
+@import "modules/block-menu"
+@import "modules/block-countdown"
+@import "modules/block-socials"
+/* ------------------------------------------------*/
+/* Main Section Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Main Section Typography Styles Start
+/* ------------------------------------------------*/
+h1
+  display: inline-block
+  position: relative
+  font-weight: 800
+  font-size: 5rem
+  line-height: 1
+  color: $txt-black
+  margin: 2.4rem 0
+  &::before
+    height: 100%
+  &.light-text
+    color: $txt-white
+  +MQ(M)
+    font-size: 7rem
+  +MQ(XXL)
+    font-size: 11rem
+    margin-bottom: 3.2rem
+
+p
+  font-size: 1.5rem
+  font-weight: 400
+  color: $txt-dark
+  &.headline-text
+    font-size: 1.6rem
+    margin-bottom: 3rem
+  +MQ(M)
+    &.headline-text
+      font-size: 1.8rem
+      margin-bottom: 3.2rem
+      max-width: 480px
+  +MQ(XXL)
+    &.headline-text
+      margin-bottom: 4.2rem
+      max-width: 540px
+      font-size: 2rem
+/* ------------------------------------------------*/
+/* Main Section Typography Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Content Sections Minimal Styles Start
+/* ------------------------------------------------*/
+.content-section
+  position: relative
+  width: 100%
+  background-color: transparent
+
+  +MQ(XL)
+    +position(absolute, 0 null null 0)
+    width: 100%
+    height: 100%
+    overflow: hidden
+    z-index: 3
+
+.about
+  .about-info, .about-photo
+    transform: translateY(0)
+  +MQ(XL)
+    .about-info
+      transform: translateY(100%)
+    .about-photo
+      transform: translateY(-100%)
+
+.works
+  .works-gallery, .works-info
+    transform: translateY(0)
+  +MQ(XL)
+    .works-gallery
+      transform: translateY(-100%)
+    .works-info
+      transform: translateY(100%)
+
+.contact
+  .contact-info, .contact-map
+    transform: translateY(0)
+  +MQ(XL)
+    .contact-info
+      z-index: 2
+      transform: translateY(100%)
+    .contact-map
+      z-index: 1
+      transform: translateY(-100%)
+/* ------------------------------------------------*/
+/* Content Sections Minimal Styles End
+/* ------------------------------------------------*/
+
+/* ------------------------------------------------*/
+/* Popup Forms Minimal Styles Start
+/* ------------------------------------------------*/
+.writealine, .notify
+  +position(fixed, 0 0 null null)
+  width: 100%
+  height: 100%
+  overflow-y: auto
+  z-index: 10
+  opacity: 1
+  transform: translateZ(0)
+  transform: translateX(100%) translateY(0)
+/* ------------------------------------------------*/
+/* Popup Forms Minimal Styles End
+/* ------------------------------------------------*/
