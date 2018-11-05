@@ -63,6 +63,9 @@
     .biz-name {
         font-size: 1.35rem;
     }
+    p.headline-text {
+        font-size: 1.1rem;
+    }
 }
 
 @media only screen and (min-width: 550px) {
